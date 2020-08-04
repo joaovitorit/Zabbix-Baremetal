@@ -31,18 +31,25 @@ bgpd=yes
 #CONFIGURAR SESSÃO BGP USANDO ASN PRIVADO 64512 <---> 65534
 
 #Digite no terminal
+
 Vtysh
 
 #QUANDO LOGAR NO TERMINAL DIGITE
+
 configure
 
 #ENTRANDO NA INSTÂNCIA DE BGP
+
 router bgp 64512
 
 #CONFIGURANDO A SESSÃO BGP
+
 neighbor XXX.XXX.XXX.XXX remote-as 64513
+
 neighbor XXX.XXX.XXX.XXX description ALGUM NOME
+
 neighbor XXX.XXX.XXX.XXX password SUASENHA
+
 neighbor XXX.XXX.XXX.XXX ebgp-multihop 15
 
 
