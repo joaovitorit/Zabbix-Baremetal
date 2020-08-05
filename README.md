@@ -2,10 +2,15 @@
 Zabbix-Baremetal
 
 # Sistema operaciona
+
 Ubuntu Server 18.04
+
 TÚNNEL GRE
+
 FRR (BGP) 7.3.1
+
 Zabbix 5.0
+
 Grafana 7.0
 
 #################################################### Instalação FRR #########################################################################
