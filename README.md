@@ -13,6 +13,14 @@ Zabbix 5.0
 
 Grafana 7.0
 
+############################# CONSULTAR DE O MODULO DO GRE ESTÁ CARREGADO NO KERNEL DO SO #############################
+
+lsmod | grep gre
+
+#############################CARREGANDO O MODULO GRE NO KERNEL #############################
+
+modprobe ip_gre
+
 #################################################### Instalação FRR #########################################################################
 
 URL: https://deb.frrouting.org/
