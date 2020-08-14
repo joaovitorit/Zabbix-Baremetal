@@ -24,8 +24,11 @@ modprobe ip_gre
 ########## Instalação FRR ##########
 
 URL: https://deb.frrouting.org/
+
 # add GPG key
+
 curl -s https://deb.frrouting.org/frr/keys.asc | sudo apt-key add -
+
 # possible values for FRRVER: frr-6 frr-7 frr-stable
 # frr-stable will be the latest official stable release
 
@@ -40,9 +43,11 @@ sudo apt update && sudo apt install frr frr-pythontools
 ########## CONFIGURAÇÃO FRR ##########
 
 ########## CONFIGURAR O DAEMON BGP E VTYSH (SHELL DO FRR) ##########
+
 vi /etc/frr/daemons
 
 ########## ativar como yes os daemons que precisa utilizar no nosso caso bgpd ##########
+
 bgpd=yes
 
 ########## CONFIGURAR SESSÃO BGP USANDO ASN PRIVADO 64512 <---> 65534 ##########
