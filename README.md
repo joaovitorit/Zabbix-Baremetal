@@ -13,15 +13,15 @@ Zabbix 5.0
 
 Grafana 7.0
 
-############################# CONSULTAR DE O MODULO DO GRE ESTÁ CARREGADO NO KERNEL DO SO #############################
+########## CONSULTAR DE O MODULO DO GRE ESTÁ CARREGADO NO KERNEL DO SO ##########
 
 lsmod | grep gre
 
-#############################CARREGANDO O MODULO GRE NO KERNEL #############################
+########## CARREGANDO O MODULO GRE NO KERNEL ##########
 
 modprobe ip_gre
 
-#################################################### Instalação FRR #########################################################################
+########## Instalação FRR ##########
 
 URL: https://deb.frrouting.org/
 # add GPG key
@@ -37,29 +37,29 @@ echo deb https://deb.frrouting.org/frr $(lsb_release -s -c) $FRRVER | sudo tee -
 
 sudo apt update && sudo apt install frr frr-pythontools
 
-#################################################### CONFIGURAÇÃO FRR #########################################################################
+########## CONFIGURAÇÃO FRR ##########
 
-#CONFIGURAR O DAEMON BGP E VTYSH (SHELL DO FRR)
+########## CONFIGURAR O DAEMON BGP E VTYSH (SHELL DO FRR) ##########
 vi /etc/frr/daemons
 
-#ativar como yes os daemons que precisa utilizar no nosso caso bgpd
+########## ativar como yes os daemons que precisa utilizar no nosso caso bgpd ##########
 bgpd=yes
 
-#CONFIGURAR SESSÃO BGP USANDO ASN PRIVADO 64512 <---> 65534
+########## CONFIGURAR SESSÃO BGP USANDO ASN PRIVADO 64512 <---> 65534 ##########
 
-#Digite no terminal
+########## Digite no terminal ##########
 
 Vtysh
 
-#QUANDO LOGAR NO TERMINAL DIGITE
+########## QUANDO LOGAR NO TERMINAL DIGITE ##########
 
 configure
 
-#ENTRANDO NA INSTÂNCIA DE BGP
+########## ENTRANDO NA INSTÂNCIA DE BGP ##########
 
 router bgp 64512
 
-#CONFIGURANDO A SESSÃO BGP
+########## CONFIGURANDO A SESSÃO BGP ##########
 
 neighbor XXX.XXX.XXX.XXX remote-as 64513
 
